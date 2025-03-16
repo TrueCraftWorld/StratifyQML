@@ -3,44 +3,44 @@ import StratifyLabs.UI 2.0
 SRow {
   SBadge{
     span: 4;
-    icon: Fa.Icon.area_chart;
+    iconString: Fa.Icon.area_chart;
   }
   SBadge{
     span: 4;
-    icon: Fa.Icon.cog;
+    iconString: Fa.Icon.cog;
   }
   SBadge{
     span: 4;
-    icon: Fa.Icon.refresh;
+    iconString: Fa.Icon.refresh;
   }
 
   SBadge{
     span: 4;
-    icon: Fa.Icon.repeat;
+    iconString: Fa.Icon.repeat;
   }
   SBadge{
     span: 4;
-    icon: Fa.Icon.check;
+    iconString: Fa.Icon.check;
   }
   SBadge{
     span: 4;
-    icon: Fa.Icon.bolt;
+    iconString: Fa.Icon.bolt;
   }
 
   SBadge{
     span: 4;
     style: "icon-spin";
-    icon: Fa.Icon.location_arrow;
+    iconString: Fa.Icon.location_arrow;
   }
   SBadge{
     span: 4;
     style: "icon-pulse";
-    icon: Fa.Icon.spinner;
+    iconString: Fa.Icon.spinner;
   }
   SBadge{
     span: 4;
     style: "icon-spin";
-    icon: Fa.Icon.safari;
+    iconString: Fa.Icon.safari;
   }
 }
 

@@ -37,7 +37,7 @@ SRow {
           SIcon {
             span: 1;
             style: "right text-on-secondary";
-            icon: Fa.Icon.chevron_right;
+            iconString: Fa.Icon.chevron_right;
           }
         }
         MouseArea {

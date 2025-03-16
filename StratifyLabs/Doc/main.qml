@@ -1,6 +1,6 @@
-import QtQuick 2.6
-import QtQuick.Controls 2.0
-import QtQuick.Window 2.2
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+import QtQuick.Window 2.15
 import StratifyLabs.UI 2.0
 
 
@@ -8,7 +8,7 @@ ApplicationWindow {
   id: window;
   visible: true;
   minimumWidth: 400;
-  minimumHeight: 400;
+  minimumHeight: 640;
   title: "SL.UI";
 
   property string version: "SL.UI 1.0 based on StratifyLabs.UI 2.0"
@@ -73,19 +73,19 @@ ApplicationWindow {
           id: menuItems;
           EDrawerHeading { label: "Menu"; }
           SHLine{ attr.paddingVertical: 0; }
-          EDrawerHeading { label: "Getting Started"; icon: Fa.Icon.smile_o; }
+          EDrawerHeading { label: "Getting Started"; iconString: Fa.Icon.smile_o; }
           EDrawerItem { label: "Introduction"; }
           EDrawerItem { label: "Theme"; }
           EDrawerItem { label: "Attributes"; }
           EDrawerItem { label: "FontAwesome"; }
           SHLine{ attr.paddingVertical: 0; }
-          EDrawerHeading { label: "Layouts"; icon: Fa.Icon.object_group; }
+          EDrawerHeading { label: "Layouts"; iconString: Fa.Icon.object_group; }
           EDrawerItem { label: "Animators"; }
           EDrawerItem { label: "Columns"; }
           EDrawerItem { label: "Containers"; }
           EDrawerItem { label: "Rows"; }
           SHLine{ attr.paddingVertical: 0; }
-          EDrawerHeading { label: "Indicators"; icon: Fa.Icon.star; }
+          EDrawerHeading { label: "Indicators"; iconString: Fa.Icon.star; }
           EDrawerItem { label: "Alerts"; }
           EDrawerItem { label: "Badges"; }
           EDrawerItem { label: "Icons"; }
@@ -97,7 +97,7 @@ ApplicationWindow {
           EDrawerItem { label: "ToolTips"; }
           EDrawerItem { label: "Wells"; }
           SHLine{ attr.paddingVertical: 0; }
-          EDrawerHeading { label: "Input"; icon: Fa.Icon.pencil; }
+          EDrawerHeading { label: "Input"; iconString: Fa.Icon.pencil; }
           EDrawerItem { label: "Buttons"; }
           EDrawerItem { label: "CheckBoxes"; }
           EDrawerItem { label: "Dropdowns"; }
@@ -106,12 +106,46 @@ ApplicationWindow {
           EDrawerItem { label: "Sliders"; }
           EDrawerItem { label: "TextBoxes"; }
           SHLine{ attr.paddingVertical: 0; }
-          EDrawerHeading { label: "Models"; icon: Fa.Icon.database; }
+          EDrawerHeading { label: "Models"; iconString: Fa.Icon.database; }
           EDrawerItem { label: "JsonModels"; }
           EDrawerItem { label: "Lists"; }
-          EDrawerItem { label: "Charts"; }
           EDrawerItem { label: "Tables"; }
         }
+      }
+    }
+  }
+
+
+  SModal {
+    id: aboutModal;
+    title: "StratifyLabs UI";
+    standardButtons: 0;
+    SColumn {
+      SLabel {
+        style: "left padding-zero";
+        text: "Version";
+      }
+
+      SText {
+        style: "block";
+        text: version;
+      }
+
+      SLabel {
+        style: "left padding-zero";
+        text: "About";
+      }
+
+      SText {
+        style: "block";
+        text: "StratifyLabs UI 2.0 is a QML framework that works, looks, and feels much like the twitter bootstrap HTML framework";
+      }
+
+      SButton {
+        style: "btn-outline-info";
+        iconString: Fa.Icon.github;
+        text: "Fork on Github";
+        onClicked: Qt.openUrlExternally("https://github.com/StratifyLabs/StratifyQML");
       }
     }
   }
@@ -127,7 +161,7 @@ ApplicationWindow {
         SButton {
           span: 1;
           style: "left btn-naked text-on-primary";
-          icon: Fa.Icon.bars;
+          iconString: Fa.Icon.bars;
           onClicked: drawer.open();
         }
 
@@ -139,7 +173,7 @@ ApplicationWindow {
         SButton {
           span: 1;
           style: "right btn-naked text-on-primary";
-          icon: Fa.Icon.info_circle;
+          iconString: Fa.Icon.info_circle;
           onClicked: aboutModal.open();
         }
       }
@@ -150,10 +184,12 @@ ApplicationWindow {
       id: animationContainer;
       style: "block fill";
 
-      screen: "Charts";
-
       onScreenChanged: {
         drawer.setActiveItem(screen);
+      }
+
+      Component.onCompleted: {
+        showScreen(current);
       }
 
       resources: [
@@ -188,14 +224,14 @@ ApplicationWindow {
 
         JsonModels{},
         Lists{},
-        Charts{},
         Tables{}
       ]
     }
 
     SContainer {
       style: "padding-zero";
-      anchors.bottom: parent.bottom;
+      // anchors.bottom: parent.bottom;
+      // Layouts.a
       Rectangle {
         anchors.fill: parent;
         color: STheme.gray_dark;
@@ -211,7 +247,7 @@ ApplicationWindow {
             SButton {
               id: previousButton;
               style: "left btn-naked text-on-primary lg";
-              icon: Fa.Icon.chevron_left;
+              iconString: Fa.Icon.chevron_left;
               onClicked: screen = animationContainer.previous();
             }
             SText {
@@ -234,46 +270,11 @@ ApplicationWindow {
             SButton {
               id: nextButton;
               style: "right btn-naked text-on-primary lg";
-              icon: Fa.Icon.chevron_right;
+              iconString: Fa.Icon.chevron_right;
               onClicked: screen = animationContainer.next();
             }
           }
         }
-      }
-    }
-  }
-
-  SModal {
-    id: aboutModal;
-    title: "StratifyLabs UI";
-    standardButtons: 0;
-    //z: 100;
-    SColumn {
-      SLabel {
-        style: "left padding-zero";
-        text: "Version";
-      }
-
-      SText {
-        style: "block";
-        text: version;
-      }
-
-      SLabel {
-        style: "left padding-zero";
-        text: "About";
-      }
-
-      SText {
-        style: "block";
-        text: "StratifyLabs UI 2.0 is a QML framework that works, looks, and feels much like the twitter bootstrap HTML framework";
-      }
-
-      SButton {
-        style: "btn-outline-info";
-        icon: Fa.Icon.github;
-        text: "Fork on Github";
-        onClicked: Qt.openUrlExternally("https://github.com/StratifyLabs/StratifyQML");
       }
     }
   }
@@ -285,7 +286,7 @@ ApplicationWindow {
   Component.onCompleted: {
     STheme.brand_primary = "#244E99";
     STheme.brand_secondary = "#383838";
-    screen = "Charts";
+    screen = "Introduction";
     STheme.updateScreenSize(width);
   }
 

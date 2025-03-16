@@ -7,7 +7,7 @@ SColumn {
 
   SIcon {
     attr.spin: object.isSpinning;
-    icon: Fa.Icon.location_arrow;
+    iconString: Fa.Icon.location_arrow;
   }
   SButton {
     text:

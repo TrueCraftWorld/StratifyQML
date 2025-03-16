@@ -19,7 +19,7 @@ SColumn {
       SIcon {
         span: 1;
         style: "right";
-        icon: Fa.Icon.chevron_right;
+        iconString: Fa.Icon.chevron_right;
       }
     }
     MouseArea {
@@ -38,7 +38,7 @@ SColumn {
       SIcon {
         span: 1;
         style: "right";
-        icon: Fa.Icon.chevron_right;
+        iconString: Fa.Icon.chevron_right;
       }
     }
     MouseArea {

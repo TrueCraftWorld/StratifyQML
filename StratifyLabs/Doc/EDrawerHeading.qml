@@ -4,7 +4,7 @@ import StratifyLabs.UI 2.0
 SContainer {
   id: root;
   property alias label: label.text;
-  property alias icon: icon.icon;
+  property alias iconString: icon.iconString;
 
   SRow {
     SText { id: label; span: 1; style: "left text-on-info text-bold"; }

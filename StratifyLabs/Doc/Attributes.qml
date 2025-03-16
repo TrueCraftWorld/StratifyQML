@@ -11,7 +11,6 @@ object which then defines the size and color scheme. \
 There are two ways to change an object\'s attributes: \
 1) using <i>style</i> 2) using <i>attr</i> directly.';
   }
-
   EParagraph { text: '\
 Additionally, each item has quick access to <i>attr.span</i> through \
 the <i>span</i> property which \
@@ -25,12 +24,9 @@ defines the properties listed below.';
 
   ECodeBlockInline {
     text: '\
-property alias style:
-  attr.style;
-property alias span:
-  attr.span;
-property alias attr:
-  attr;
+property alias style: attr.style;
+property alias span: attr.span;
+property alias attr: attr;
 SAttributes {
   id: attr;
   type: "button";
@@ -58,7 +54,6 @@ For example, <i>style: "padding-zero"</i> will cause \
 <i>paddingHorizontal</i> and <i>paddingVertical</i> to be \
 set to zero.';
   }
-
   ESubSectionTitle { text: 'SSizeAttributes'; }
   EParagraph { text: '\
 <i>SSizeAttributes</i> (all objects) support the following style \
@@ -84,7 +79,6 @@ options.';
   EBullet { text: "bottom"; }
   EBullet { text: "middle"; }
 
-
   AttributeExampleAlignment{}
   ECodeButton { source: "AttributeExampleAlignment"; }
 
@@ -93,10 +87,8 @@ options.';
   EBullet { text: "block: fill width"; }
   EBullet { text: "implicit-size: no fill"; }
 
-
   AttributeExampleSize{}
   ECodeButton { source: "AttributeExampleSize"; }
-
 
   SText { style: "block text-bold"; text: 'SAttributes'; }
   EParagraph { text: 'SAttributes (most objects) support the following style \
@@ -120,10 +112,8 @@ options.'; }
   EBullet { text: "text-sm"; }
   EBullet { text: "text-lg"; }
 
-
   AttributeExampleTextSize{}
   ECodeButton { source: "AttributeExampleTextSize"; }
-
 
   ESubSectionTitle { text: "Text Alignment"; }
 
@@ -136,7 +126,6 @@ options.'; }
 
   AttributeExampleTextAlignment{}
   ECodeButton { source: "AttributeExampleTextAlignment"; }
-
 
   SHLine {}
 
@@ -189,8 +178,7 @@ SButton uses "btn-outline-primary" for setting the button\'s color scheme.';
   }
 
 
-
-  ESectionTitle { text: "<i>attr</i>"; }
+  ESectionTitle { text: "Further Customization"; }
 
   EParagraph { text: '\
 If the styling options above don\'t meet your needs, \

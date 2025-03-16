@@ -18,14 +18,14 @@ SRow {
   }
   SIcon {
     span: 2;
-    icon: Fa.Icon.user;
+    iconString: Fa.Icon.user;
   }
   SInput {
     span: 10;
   }
   SIcon {
     span: 2;
-    icon: Fa.Icon.lock;
+    iconString: Fa.Icon.lock;
   }
   SPassword {
     span: 10;

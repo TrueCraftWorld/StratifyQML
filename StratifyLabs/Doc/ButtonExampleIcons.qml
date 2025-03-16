@@ -3,17 +3,17 @@ import StratifyLabs.UI 2.0
 SRow {
   SButton{
     span: 4;
-    icon: Fa.Icon.area_chart;
+    iconString: Fa.Icon.area_chart;
     text: "Area Chart";
   }
   SButton{
     span: 4;
-    icon: Fa.Icon.cog;
+    iconString: Fa.Icon.cog;
     text: "Cog";
   }
   SButton{
     span: 4;
-    icon: Fa.Icon.refresh;
+    iconString: Fa.Icon.refresh;
     text: "Refresh";
   }
 
@@ -23,29 +23,29 @@ SRow {
   }
   SButton{
     span: 4;
-    icon: Fa.Icon.check;
+    iconString: Fa.Icon.check;
   }
   SButton{
     span: 4;
-    icon: Fa.Icon.bolt;
+    iconString: Fa.Icon.bolt;
   }
 
   SButton{
     span: 4;
     style: "icon-spin";
-    icon: Fa.Icon.location_arrow;
+    iconString: Fa.Icon.location_arrow;
     text: "Spin";
   }
   SButton{
     span: 4;
     style: "icon-pulse";
-    icon: Fa.Icon.spinner;
+    iconString: Fa.Icon.spinner;
     text: "Pulse";
   }
   SButton{
     span: 4;
     style: "icon-spin";
-    icon: Fa.Icon.safari;
+    iconString: Fa.Icon.safari;
     text: "Spin";
   }
 }

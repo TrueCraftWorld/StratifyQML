@@ -10,7 +10,7 @@ SColumn {
     SIcon {
       anchors.centerIn: parent;
       style: "text-h1";
-      icon: Fa.Icon.cloud;
+      iconString: Fa.Icon.cloud;
     }
 
     Timer {

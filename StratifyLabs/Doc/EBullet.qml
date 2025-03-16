@@ -6,7 +6,7 @@ SGroup {
   SIcon {
     id: bullet;
     attr.fontSize: 8;
-    icon: Fa.Icon.circle;
+    iconString: Fa.Icon.circle;
   }
   SText {
     anchors.verticalCenter: bullet.verticalCenter;

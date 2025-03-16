@@ -3,7 +3,7 @@ import StratifyLabs.UI 2.0
 SRow {
   SButton {
     span: 3;
-    icon: Fa.Icon.inbox;
+    iconString: Fa.Icon.inbox;
     label: "Label";
   }
   /*
@@ -13,17 +13,17 @@ SRow {
 
   SButton {
     span: 3;
-    icon: Fa.Icon.map_pin;
+    iconString: Fa.Icon.map_pin;
     text: "Text";
   }
 
   SButton {
     span: 3;
-    icon: Fa.Icon.level_up;
+    iconString: Fa.Icon.level_up;
   }
 
   SBadge {
     span: 3;
-    icon: Fa.Icon.life_buoy;
+    iconString: Fa.Icon.life_buoy;
   }
 }
